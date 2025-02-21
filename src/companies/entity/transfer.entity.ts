@@ -19,11 +19,8 @@ export class Transfer {
     @CreateDateColumn({ type: 'timestamp', precision: 0 })
     createdAt: Date;
 
-    @ManyToOne(() => Company, companies => companies.transfers)
+    @ManyToOne(() => Company, company => company.transfers)
     @JoinColumn({ name: 'company_id' })
     company: Company;
-
-    @Column()
-    company_id: number;
 
 }

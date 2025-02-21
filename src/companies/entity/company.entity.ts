@@ -19,7 +19,7 @@ export class Company {
     @CreateDateColumn({ type: 'timestamp', precision: 0 })
     createdAt: Date;
 
-    @OneToMany(() => Transfer, (transfers) => transfers.company)
+    @OneToMany(() => Transfer, transfer => transfer.company)
     transfers: Transfer[];
 
 }
