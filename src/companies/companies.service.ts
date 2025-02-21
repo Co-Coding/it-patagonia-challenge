@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { DateFilterDto } from './dtos/filters.dto';
-import { CompaniesRepository } from './companies.repository';
+import { CompaniesRepository } from './companies.repository'
 import { CreateCompanyDto } from './dtos/createCompany.dto';
 import { Company } from './entity/company.entity';
-import { ICompany } from './types/company.type';
+import { ICompany } from './interfaces/company.interface';
 
 @Injectable()
 export class CompaniesService {
