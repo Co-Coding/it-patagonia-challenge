@@ -20,6 +20,6 @@ export class Company {
     createdAt: Date;
 
     @OneToMany(() => Transfer, transfer => transfer.company)
-    transfers: Transfer[];
+    transfers?: Transfer[];
 
 }
