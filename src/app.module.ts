@@ -9,12 +9,9 @@ import { Transfer } from './companies/entity/transfer.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: process.env.DB_HOST,
-      port: 5432,
-      username: process.env.DB_USERNAME,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME,
+      url: process.env.DATABASE_URL || 'postgresql://neondb_owner:npg_J3yzcHN0mMZK@ep-cool-water-a4v91glv-pooler.us-east-1.aws.neon.tech/it-patagonia?sslmode=require',
       entities: [Company, Transfer],
+      synchronize: false,
     }),
     CompaniesModule
   ],
